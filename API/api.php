@@ -44,10 +44,9 @@ switch ($case) {
 
         $spl = mysqli_query($conn, "UPDATE users SET name = '$name', username = '$username',email = '$email',phone = '$phone',password = '$password' Where id = $id");
         if (!$spl) {
-            echo mysqli_error($conn);
+            echo json_encode(array('title' => 'Unsuccessfully!', 'status' => 'error', 'message' => 'Edited data is not success.'));
         } else {
-            echo "Records added successfully.";
-            header('Location: ../dashboard/html/magUsers.php');
+            echo json_encode(array('title' => 'Successfully!', 'status' => 'success', 'message' => 'Edited data is successfully.'));
         }
 
         break;
@@ -55,10 +54,9 @@ switch ($case) {
         $id = $_GET['id'];
         $spl = mysqli_query($conn, "UPDATE users SET void = '1' Where id = $id");
         if (!$spl) {
-            echo mysqli_error($conn);
+            echo json_encode(array('title' => 'Unsuccessfully!', 'status' => 'error', 'message' => 'Deleted data is not success.'));
         } else {
-            echo "Records added successfully.";
-            header('Location: ../dashboard/html/magUsers.php');
+            echo json_encode(array('title' => 'Successfully!', 'status' => 'success', 'message' => 'Deleted data is successfully.'));
         }
 
         break;
