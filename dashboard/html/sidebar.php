@@ -38,7 +38,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                 </li>
             </ul> -->
         </li>
-        <li class="menu-item">
+        <li class="menu-item <?php echo ($currentPage == 'product.php' || $currentPage == 'frm_product.php') ? "active" : ""; ?>">
             <a href="product.php" class="menu-link">
                 <i class="menu-icon fa-light fa-box-taped"></i>
                 <div data-i18n="Authentications">Products</div>
