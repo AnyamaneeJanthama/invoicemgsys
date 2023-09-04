@@ -18,8 +18,8 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 
     <ul class="menu menu-inner py-1">
         <!-- Dashboard -->
-        <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <li class="menu-item  <?php echo ($currentPage == 'invoice.php') ? "active" : ""; ?>">
+            <a href="invoice.php" class="menu-link">
                 <i class="menu-icon fa-light fa-file-invoice"></i>
                 <div data-i18n="Authentications">Invoices</div>
             </a>
