@@ -38,7 +38,8 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                 </li>
             </ul> -->
         </li>
-        <li class="menu-item <?php echo ($currentPage == 'product.php' || $currentPage == 'frm_product.php') ? "active" : ""; ?>">
+        <li
+            class="menu-item <?php echo ($currentPage == 'product.php' || $currentPage == 'frm_product.php') ? "active" : ""; ?>">
             <a href="product.php" class="menu-link">
                 <i class="menu-icon fa-light fa-box-taped"></i>
                 <div data-i18n="Authentications">Products</div>
@@ -65,13 +66,15 @@ $currentPage = basename($_SERVER['PHP_SELF']);
             </ul> -->
         </li>
 
-        <li class="menu-item <?php echo ($currentPage == 'magUsers.php' || $currentPage == 'frm_user.php') ? "active" : ""; ?>">
+        <li
+            class="menu-item <?php echo ($currentPage == 'magUsers.php' || $currentPage == 'frm_user.php') ? "active" : ""; ?>">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon fa-light fa-user"></i>
                 <div data-i18n="Authentications">System Users</div>
             </a>
             <ul class="menu-sub <?php echo ($currentPage == 'frm_user.php') ? "active-sub" : ""; ?>">
-                <li class="menu-item <?php echo ($currentPage == 'magUsers.php' || $currentPage == 'frm_user.php') ? "active-sub" : ""; ?>">
+                <li
+                    class="menu-item <?php echo ($currentPage == 'magUsers.php' || $currentPage == 'frm_user.php') ? "active-sub" : ""; ?>">
                     <a href="magUsers.php" class="menu-link">
                         <!-- <i class="menu-icon tf-icons bx bx-home-circle"></i> -->
                         <i class="menu-icon fa-regular fa-gear"></i>
